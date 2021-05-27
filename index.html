@@ -84,7 +84,7 @@ Informarea prezentă poate face obiectul unor modificări ulterioare. Toate actu
 <br><br><br>
 <div class="row">
 	<div class="col-sm-3">  
-		<input id="nameInput" type="text" class="form-control " placeholder="Numele dvs. complet" aria-label="Recipient's username" aria-describedby="basic-addon2">
+		<input id="nameInput" type="text" class="form-control " placeholder="Nume, prenume" aria-label="Recipient's username" aria-describedby="basic-addon2">
 	</div>
 	<div class="col-sm-3">
 		<button class="btn btn-success custom" type="button" id="addNameBtn" onclick="setNameCookie()">Salveaza</button>
@@ -179,6 +179,13 @@ function alertCookie() { alert(document.cookie); }
 	document.cookie = "operating-system="+OSName;
 	document.getElementById('soCookie').innerHTML=OSName;
 	
+	function setNameCookie(){
+		let element = document.getElementById('nameInput');
+		document.cookie = "numeStudent="+element.value;
+		let btn1 = document.getElementById('addNameBtn');
+		btn1.style="display:none";
+		document.getElementById('nameCookie').innerHTML=element.value;
+	}
 	if(document.cookie){
 	let numeStudent =null;
 		const numeStudentKey = document.cookie
