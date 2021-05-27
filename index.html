@@ -7,7 +7,7 @@
   <hr>
   <hr>
 <div class="Nota de informare" style="text-align:left;padding:0 50px 50px 50px">
-<button id="titluInfo" class="btn btn-outline-secondary custom" onclick="displayInfo()">NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE </button>
+<button id="titluInfo" class="btn btn-outline-secondary custom" onclick="displayInfo()">NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE +</button>
 
 <div id="textInfo" style="display:none;"><br><br><br>
  Universitatea Tehnica din Cluj-Napoca în calitate de operator de date cu caracter personal, în conformitate cu prevederile Legii nr.190/2018 privind măsuri de punere în aplicare a Regulamentului (UE) 2016/679 al Parlamentului European şi al Consiliului din 27 aprilie 2016 privind protecţia persoanelor fizice în ceea ce priveşte prelucrarea datelor cu caracter personal şi privind libera circulaţie a acestor date şi de abrogare a Directivei 95/46/CE (Regulamentul general privind protecţia datelor),  prelucrează datele cu caracter personal ce îi sunt furnizate în mod voluntar sau în posesia cărora intră în mod indirect.
@@ -67,18 +67,18 @@ Informarea prezentă poate face obiectul unor modificări ulterioare. Toate actu
 </div>
 <hr>
 <br><br>
-
+</div>
   </body>
-  </div>
+  
 <script>
 function displayInfo(){
 		if(!expandedInfo){
 			document.getElementById('textInfo').style="display:block";
-			document.getElementById('titluInfo').innerHTML="NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE ";
+			document.getElementById('titluInfo').innerHTML="NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE -";
 			expandedInfo=true;
 		} else {
 			document.getElementById('textInfo').style="display:none";
-			document.getElementById('titluInfo').innerHTML="NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE ";
+			document.getElementById('titluInfo').innerHTML="NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE +";
 			expandedInfo=false;
 		}
 	}
