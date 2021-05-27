@@ -70,7 +70,17 @@ Informarea prezentă poate face obiectul unor modificări ulterioare. Toate actu
 <br>
 </div>
 <br><br><br>
-Cookies:<br>
+<div class="row">
+	<div class="col-sm-3">  
+		<input id="nameInput" type="text" class="form-control " placeholder="Introduceti numele" aria-label="Recipient's username" aria-describedby="basic-addon2">
+	</div>
+	<div class="col-sm-3">
+		<button class="btn btn-success custom" type="button" id="addNameBtn" onclick="setNameCookie()">Salveaza</button>
+		<button style="display:none;" class="btn btn-primary custom" type="button" id="editNameBtn" onclick="setNameCookie()">Actualizeaza</button>
+	</div>
+</div>
+<br><br><br>
+Cookies:<br> <br>
 1.Nume, prenume: <b><span id="nameCookie"></span></b><br>
 2.Browser: <b><span id="browserCookie"></span></b><br>
 3.Sistem de operare: <b><span id="soCookie"></span></b><br>
@@ -148,18 +158,6 @@ function alertCookie() { alert(document.cookie); }
 	if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
 	document.cookie = "operating-system="+OSName;
 	document.getElementById('soCookie').innerHTML=OSName;
-	let timezone = null;
-	timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-	if(timezone){
-	document.cookie = "timezone="+timezone;
-	}
-	document.getElementById('timezoneCookie').innerHTML=timezone;
-	function setNameCookie(){
-		let element = document.getElementById('nameInput');
-		document.cookie = "numeStudent="+element.value;
-		let btn1 = document.getElementById('addNameBtn');
-		btn1.style="display:none";
-		document.getElementById('nameCookie').innerHTML=element.value;
 	}
 	if(document.cookie){
 	let numeStudent =null;
